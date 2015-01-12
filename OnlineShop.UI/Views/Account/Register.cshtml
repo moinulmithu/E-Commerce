@@ -1,0 +1,49 @@
+﻿@model OnlineShop.UI.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset class="LoginField">
+        
+            <legend style="color: #0026ff"><span style="font-family: Times New Roman">Registration Form</span></legend>
+        
+        <ol class="FormTable">
+            <li>
+                @Html.LabelFor(m => m.UserName)
+                <span style="margin-left:5px;"> @Html.TextBoxFor(m => m.UserName)</span>
+            </li>
+
+            <li>
+                @Html.LabelFor(m => m.CellNo)
+
+                <span style="margin-left:7px;">  @Html.TextBoxFor(m => m.CellNo)</span>
+            </li>
+
+            <li>
+                @Html.LabelFor(m => m.Address)
+
+                <span style="margin-left:20px;">  @Html.TextBoxFor(m => m.Address)</span>
+            </li>
+
+            <li>
+                @Html.LabelFor(m => m.Password)
+                
+                <span style="margin-left:12px;">  @Html.PasswordFor(m => m.Password)</span>
+            </li>
+            <li>
+                @*@Html.LabelFor(m => m.ConfirmPassword)*@
+                @Html.Label("Confirm")
+                <span style="margin-left:22px;">@Html.PasswordFor(m => m.ConfirmPassword)</span>
+            </li>
+        </ol>
+        <input type="submit" value="Register" />
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

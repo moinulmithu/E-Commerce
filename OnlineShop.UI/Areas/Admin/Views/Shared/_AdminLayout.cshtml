@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My Online Shop</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @*        @Styles.Render("~/Content/css")*@
+        @Scripts.Render("~/bundles/modernizr")
+    <link href="@Url.Content("~/Content/reset.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/AdminProduct.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/productstyle.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/footer.css")" rel="stylesheet" type="text/css" />
+
+    @*===========================================================================================*@
+
+    <script type="text/javascript" src="@Url.Content("~/Scripts/ms.js")"></script>
+</head>
+<body>
+    <div class="page">
+        <header class="main_header">
+            <section id="header_section">
+                <div class="title">
+                    <a> <img src="~/Images/Logo.png" height="180px" width="500px" /></a>
+                </div>
+                <div class="loginDisplay">
+@Html.Partial("_LoginPartial")
+                </div>
+            </section>
+            <nav id="main_menu">
+
+                <ul>
+                    <li class="first_list"><a href="~/Admin/Home/Index" class="main_menu_first main_current">home</a></li>
+
+                    <li class="first_list">
+                        <a href="~/Admin/Category/Index" class="main_menu_first">Catagory</a>
+                        
+                    </li>
+                    
+                    <li class="first_list"><a href="~/Admin/Product/Index" class="main_menu_first">Product</a></li>
+                    <li class="first_list">
+                        <a href="~/Admin/OrderManage/Orders" class="main_menu_first">Order</a>
+                        
+                    </li>
+                    <li class="first_list"><a href="~/Admin/Home/MemberManage" class="main_menu_first">Member</a></li>
+                </ul>
+
+            </nav>
+        </header>
+
+        <section id="bar"></section>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <div class="clear">
+        </div>
+        <footer id="main_footer">
+           
+
+
+        </footer>
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        var theForm = document.forms['ctl01'];
+        if (!theForm) {
+            theForm = document.ctl01;
+        }
+        function __doPostBack(eventTarget, eventArgument) {
+            if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                theForm.__EVENTTARGET.value = eventTarget;
+                theForm.__EVENTARGUMENT.value = eventArgument;
+                theForm.submit();
+            }
+        }
+        //]]>
+    </script>
+    <script type="text/javascript">
+        new Sys.WebForms.Menu({ element: 'NavigationMenu', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });
+        new Sys.WebForms.Menu({ element: 'CategoryMenu', disappearAfter: 500, orientation: 'vertical', tabIndex: 0, disabled: false });
+    </script>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<OnlineShop.Domain.Product>
+
+@{
+    ViewBag.Title = "ProductByCatagory";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Product By Catagory</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="adminIndexListTable">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            @{ byte[] photo = item.ProductImage;
+             string imageSrc = null;
+             if (photo != null)
+             {
+                 imageSrc = "data:image/png;base64," + Convert.ToBase64String(photo);
+
+             }
+            }
+            <td><img src="@imageSrc" alt="Employee Photo" border="0" width="100px" height="100px" /></td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
+                @Html.ActionLink("Details", "ProductByID", new { id = item.ProductID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+            </td>
+        </tr>
+    }
+
+</table>

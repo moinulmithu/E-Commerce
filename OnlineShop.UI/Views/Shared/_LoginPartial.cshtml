@@ -1,0 +1,27 @@
+﻿@if (Request.IsAuthenticated) {
+    <text>
+<span class="CmonLink" style="margin:200px 100px;">
+
+    @if (User.Identity.Name == "Admin")
+    {     
+        @Html.ActionLink("Go To Admin Panel", "index", "Admin/Home")       
+    }
+    else
+    {
+        @Html.ActionLink("My Account", "../Cart/Cart")
+    }
+</span>
+         @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })!
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+            @Html.AntiForgeryToken()
+           
+            <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+        }
+
+    </text>
+} else {
+    <ul>
+        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

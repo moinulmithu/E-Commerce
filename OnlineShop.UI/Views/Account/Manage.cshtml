@@ -1,0 +1,27 @@
+﻿@model OnlineShop.UI.Models.LocalPasswordModel
+@{
+    ViewBag.Title = "Manage Account";
+}
+
+<div class="CmonLink" style="margin:200px 100px;">
+
+
+    @Html.ActionLink("Change PassWord", "../Account/changePass")
+</div>
+@if (ViewBag.HasLocalPassword)
+{
+    @Html.Partial("_ChangePasswordPartial")
+}
+else
+{
+    @Html.Partial("_SetPasswordPartial")
+}
+
+<section id="externalLogins">
+    @Html.Action("RemoveExternalLogins")
+    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

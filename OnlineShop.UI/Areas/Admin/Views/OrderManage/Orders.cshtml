@@ -1,0 +1,10 @@
+﻿@model IEnumerable<OnlineShop.UI.ViewModel.OrderView>
+
+@{
+    ViewBag.Title = "Orders";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*@Html.Partial("_OrderFilter")*@
+
+@Html.Partial("_OrderList", Model)

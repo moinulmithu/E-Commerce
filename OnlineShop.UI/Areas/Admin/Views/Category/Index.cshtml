@@ -1,0 +1,46 @@
+﻿@model IEnumerable<OnlineShop.Domain.Category>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div style="float:left;width:25%;"></div>
+    <div style="float:right;width:75%;">
+        <br/><br /><br /><br /><br /><br />
+        <p class="CmonLink" style="margin:10px 0px 0px 207px;">
+            @Html.ActionLink("Create New", "Create")
+        </p>
+    <table class="adminIndexListTable">
+        <tr>
+            <th>
+                Category NO.
+            </th>
+            <th>
+                Category Name
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CategoryID })|
+                     @*@Html.ActionLink("Details", "../Product/ProductByCatagory", new { id=item.CategoryID }) |*@
+                        @Html.ActionLink("Delete", "Delete", new { id=item.CategoryID })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>
+

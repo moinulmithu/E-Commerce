@@ -1,0 +1,53 @@
+﻿@model OnlineShop.Domain.Customer
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset style="margin: 30px 150px 10px 150px; background-color: #525879">
+    <legend>Customer</legend>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.UserID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserID)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.FullName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FullName)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.EmailID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmailID)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.CcNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CcNumber)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" />        
+    </p>
+    <div class="CmonLink">   @Html.ActionLink("Back to List", "MemberManage")</div>
+}

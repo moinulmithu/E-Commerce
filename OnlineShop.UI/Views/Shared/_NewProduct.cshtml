@@ -1,0 +1,28 @@
+﻿@model IEnumerable<OnlineShop.Domain.Product>
+
+
+@foreach (var P in Model)
+{
+
+        <li>
+            @{ byte[] photo = P.ProductImage;
+             string imageSrc = null;
+             if (photo != null)
+             {
+                 imageSrc = "data:image/png;base64," + Convert.ToBase64String(photo);
+
+             }
+            }
+            <a href="@Url.Action("ProductDetails", new { id = P.ProductID })" class="product" id="bacCol" title="@P.ProductName">
+                <img src="@imageSrc" alt="Employee Photo" border="0" width="180" height="180" alt="@P.ProductName" />
+                <span class="order model">@P.ProductName</span>
+                <span class="order">
+                    <span class="price"><span class="dollar">TK.</span>@P.Price</span>
+                </span>
+                <span class="order"><span class="buy-text">Buy Now</span></span>
+            </a>
+            
+        </li>
+
+}
+

@@ -1,0 +1,59 @@
+﻿@model OnlineShop.UI.ViewModel.PreOrderView
+
+@{
+    ViewBag.Title = "Checkout";
+}
+
+<div>
+    <div>
+        <h2>You order</h2>
+        <table class="adminIndexListTable">
+            <tr>
+                <th>
+                    Product
+                </th>
+                <th>
+                    Price/Unit
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    Amount
+                </th>
+            </tr>
+            @foreach (var item in Model.Cart.CartItems)
+            {
+                <tr>
+                    <td>
+                        @item.Product.ProductName
+                    </td>
+                    <td>
+                        @item.Product.Price
+                    </td>
+                    <td>
+                        @item.Quantitity
+                    </td>
+                    <td>
+                        @(item.Product.Price * item.Quantitity)
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td>
+                    <strong>Total:</strong>
+                </td>
+                <td colspan="4" align="right">
+                    @Model.Cart.Total
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h2>Ship Details</h2>
+        @Html.Partial("CustomerShipInfo",@Model.CustomerDetail)
+    </div>
+    <div class="CmonLink">
+        @Html.ActionLink("Confirm Order", "DoCheckout");
+    </div>
+</div>

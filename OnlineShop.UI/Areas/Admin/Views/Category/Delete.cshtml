@@ -1,0 +1,28 @@
+﻿@model OnlineShop.Domain.Category
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset style="margin: 30px 150px 10px 150px; background-color: #525879">
+    <legend>Category</legend>
+    <div>
+        <span class="display-label">
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </span>
+        <span class="display-field">
+            @Html.DisplayFor(model => model.CategoryName)
+        </span>
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" />        
+    </p>
+        <div class="CmonLink">
+    @Html.ActionLink("Back to List", "Index")
+</div>
+}

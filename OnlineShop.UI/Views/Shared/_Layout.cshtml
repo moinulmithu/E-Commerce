@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My Online Shop</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+@*        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+        <link href="@Url.Content("~/Content/reset.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/AdminProduct.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/productstyle.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/footer.css")" rel="stylesheet" type="text/css" />
+  
+        @*===========================================================================================*@
+        <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+        <script src="~/Scripts/slider.js"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/ms.js")"></script>
+    </head>
+    <body>
+ <div class="page">
+            <header class="main_header">
+                <section id="header_section">
+                <div class="title">
+                  <a href="/"><img src="~/Images/Logo3.png" height="200" width="800" /></a>
+                </div>
+                <div class="loginDisplay">
+                    @*<a href="#"> Log In </a> | 
+                    <a href="#" > Sign In </a>*@
+                    
+                        @Html.Partial("_LoginPartial")
+                    
+                </div>
+                    </section>
+                <nav id="main_menu">
+
+                <ul>
+                    <li class="first_list"><a href="/" class="main_menu_first">home</a></li>
+
+                     <li class="first_list categories_hor">
+                         <a href="@Url.Action("Prouduc", "Home")" class="main_menu_first">Categories</a>
+                       
+
+                        <!--add category-->
+
+                    </li>
+                    <li class="first_list"><a href="@Url.Action("Service", "Home")" class="main_menu_first">Our Services</a></li>
+                    <li class="first_list"><a href="@Url.Action("Returns", "Home")" class="main_menu_first">Cancellation and Returns</a></li>
+                     <li class="first_list"><a href="@Url.Action("Contact","Home")" class="main_menu_first">contact us</a></li>
+                </ul>
+
+            </nav>
+            </header>
+            
+            <section id="bar"></section>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+<div class="clear">
+            </div>
+            <footer id="main_footer">
+        <div class="container">
+            <div id="footer_about" class="footer_info" >
+
+                <h4>about us</h4>
+                <p>
+                    You can cancel an order on Multishopbd.com For outright cancellations contact Customer Support. If you cancel your order before your product has been shipped, we will refund the entire amount.
+                   
+
+                </p>
+
+            </div>
+            <!-- END #footer_about -->
+
+            <div id="footer_explore" class="footer_info">
+
+                <h4>explore</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="@Url.Action("Prouduc", "Home")">Featured</a></li>
+                    <li><a href="@Url.Action("Prouduc", "Home")">Products</a></li>
+                    <li><a href="@Url.Action("Service", "Home")">Our services</a></li>
+                    <li><a href="@Url.Action("Service", "Home")">Information</a></li>
+                </ul>
+
+            </div>
+            <!-- END #footer_about -->
+
+            <div id="footer_browse" class="footer_info">
+
+                <h4>browse</h4>
+                <ul>
+                    <li ><a href="@Url.Action("Returns", "Home")" >Cancellation</a></li>
+                    <li ><a href="@Url.Action("Returns", "Home")" >Returns</a></li>
+                    <li><a href="@Url.Action("Contact","Home")">contact us</a></li>
+                    <li><a href="@Url.Action("Returns", "Home")" >terms of service</a></li>
+                    <li><a href="@Url.Action("Returns", "Home")">privacy policy</a></li>
+                </ul>
+
+            </div>
+            <!-- END #footer_about -->
+
+            <div id="footer_contact" class="footer_info">
+                <div class="contact contact_icon">
+                    <h4 style="width:200px;">Contact Us</h4>
+                    <ul style="width:200px;">
+                        <li class="address">MultiShopBD Admin</li>
+                        <li class="mobile">+880 1000 000000</li>
+                        <li class="fax">Fax</li>
+                        <li class="email"><a href="mailto:info@multishopbd.com">info@multishopbd.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- END #footer_about -->
+
+            <div id="footer_connect" class="footer_info">
+
+                <h4>connect with us</h4>
+
+                <ul>
+                    <li><a href="#" id="facebook" title="Facebook">Facebook</a></li>
+                    <li><a href="#" id="dribbble" title="Dribbble">Dribbble</a></li>
+                    <li><a href="#" id="pinterest" title="Pinterest">Pinterest</a></li>
+                    <li><a href="#" id="linkedin" title="LinkedIn">LinkedIn</a></li>
+                    <li><a href="#" id="skype" title="Skype">Skype</a></li>
+                    <li><a href="#" id="sharethis" title="Share This">ShareThis</a></li>
+					<li><a href="#" id="twitter" title="Twitter">Twitter</a></li>
+					<li><a href="#" id="googleplus" title="Google Plus">GooglePlus</a></li>
+					<li><a href="#" id="rss" title="Rss">Rss</a></li>
+                </ul>
+            </div>
+
+            <section class="clear">
+                <div id="f_pament">
+                    @*<img src="../../images/payment_paypal.png" alt="paypal" title="PayPal">
+                    <img src="../../images/payment_american.png" alt="american-express" title="American Express">
+                    <img src="../../images/payment_2checkout.png" alt="2checkout" title="2checkout">
+                    <img src="../../images/payment_maestro.png" alt="maestro" title="Maestro">
+                    <img src="../../images/payment_discover.png" alt="discover" title="Discover">*@
+                </div>
+                <p id="copyright">
+                                                <span>&copy; Copyright 2013 - MultiShopBD Admin.</span>
+                    <br/>
+                    <a href="http://multishopbd.com><strong><span style="margin-left:50px;">Developed by :<span style="color:red;">Moinul</span><span style="color: rgb(157, 221, 157);">Islam</span><span style="color:red;">Mithu</span></span></strong></a> 
+                </p>
+
+                <div></div>
+            </section>
+        </div>
+        <!-- END .container -->
+        <!-- END #footer_about -->
+
+
+    </footer>
+     </div>
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['ctl01'];
+            if (!theForm) {
+                theForm = document.ctl01;
+            }
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+            //]]>
+        </script>
+        <script type="text/javascript">
+            new Sys.WebForms.Menu({ element: 'NavigationMenu', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });
+            new Sys.WebForms.Menu({ element: 'CategoryMenu', disappearAfter: 500, orientation: 'vertical', tabIndex: 0, disabled: false });
+            $(document).ready(function () {
+                $(function () {
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() > 150) {
+                            $('#back-top').fadeIn();
+                        } else {
+                            $('#back-top').fadeOut();
+                        }
+                    });
+                });
+                jQuery('.backtotop').click(function () {
+                    jQuery('html, body').animate({ scrollTop: 0 }, 'slow');
+                });
+            });
+        </script>
+
+        <div class="back-to-top" id="back-top">
+        <a title="Back to Top" href="javascript:void(0)" class="backtotop">Top</a></div>
+
+        @*@Scripts.Render("~/bundles/jquery")*@
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

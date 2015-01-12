@@ -1,0 +1,280 @@
+
+#main_footer
+{
+    background: #fff;  /*5C676F*/
+    border-top: 1px solid #d9d9d9;
+    clear: both;
+    height: 360px;
+    color: black;
+
+}
+
+    #main_footer p, #main_footer a
+    {
+        /*color: #363636;*/
+        font-size: 14px;
+    }
+
+    #main_footer h4
+    {
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0 0 21px 0;
+    }
+
+.footer_info
+{
+    float: left;
+    margin: 32px 0 40px 0;
+}
+
+#footer_about, #footer_explore, #footer_browse
+{
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+#footer_about
+{
+    width: 175px;
+}
+
+    #footer_about p, #footer_contact p, #copyright
+    {
+        line-height: 17px;
+        text-align: center;
+    }
+
+#footer_explore li, #footer_browse li
+{
+    margin: 12px 0;
+}
+
+    #footer_explore li a, #footer_browse li a
+    {
+        text-transform: capitalize;
+    }
+
+        #footer_explore li a:hover, #footer_browse li a:hover
+        {
+            color: #2aacc8;
+        }
+
+#footer_connect
+{
+    float: right;
+    width: 213px;
+    margin-right: 50px;
+}
+
+    #footer_connect h4
+    {
+        margin-left: 24px;
+    }
+
+    #footer_connect a
+    {
+        display: block;
+        float: left;
+        height: 51px;
+        margin: 0 0 10px 18px;
+        text-indent: -9999px;
+        width: 53px;
+    }
+
+#facebook
+{
+    background: url(../images/facebook_icon.png) no-repeat;
+}
+
+#dribbble
+{
+    background: url(../images/dribbble_icon.png) no-repeat;
+}
+
+#pinterest
+{
+    background: url(../images/pinterest_icon.png) no-repeat;
+}
+
+#linkedin
+{
+    background: url(../images/linkedin_icon.png) no-repeat;
+}
+
+#skype
+{
+    background: url(../images/skype_icon.png) no-repeat;
+}
+
+#sharethis
+{
+    background: url(../images/sharethis_icon.png) no-repeat;
+}
+#twitter
+{
+    background: url(../images/twitter_icon.png) no-repeat;
+}
+#googleplus
+{
+    background: url(../images/googleplus_icon.png) no-repeat;
+}
+#rss
+{
+    background: url(../images/rss_icon.png) no-repeat;
+}
+#f_pament
+{
+    
+    float: left;
+    margin-right:70px;
+}
+p#copyright
+{
+    margin-left:70px;
+    margin-right:50px;
+    float: left;
+    font-size: 13px;
+}
+
+#footer_logo
+{
+    background: url(../images/logo.png) no-repeat;
+    display: block;
+    float: left;
+    height: 55px;
+    text-indent: -9999px;
+    width: 200px;
+    margin-left:70px;
+}
+
+/******** Contact Details *******/
+#main_footer .contact
+{
+    margin-left: 15px;
+    float: left;
+}
+
+    #main_footer .contact ul
+    {
+        width: 260px;
+    }
+
+        #main_footer .contact ul li
+        {
+            font-size: 12px;
+            list-style-type: none;
+            padding: 0 0 0 36px;
+            min-height: 30px;
+            line-height: 18px;
+            margin-bottom: 7px;
+        }
+
+#main_footer .contact_icon ul li
+{
+    background: url(../images/contact-icon.png) left top no-repeat;
+}
+
+#main_footer .contact_icon1 ul li
+{
+    background: url(../images/contact-icon-1.png) left top no-repeat;
+}
+
+#main_footer .contact_icon2 ul li
+{
+    background: url(../images/contact-icon-2.png) left top no-repeat;
+}
+
+#main_footer .contact_icon3 ul li
+{
+    background: url(../images/contact-icon-3.png) left top no-repeat;
+}
+
+#main_footer .contact_icon4 ul li
+{
+    background: url(../images/contact-icon-4.png) left top no-repeat;
+}
+
+#main_footer .contact_icon5 ul li
+{
+    background: url(../images/contact-icon-5.png) left top no-repeat;
+}
+
+#main_footer .contact_icon6 ul li
+{
+    background: url(../images/contact-icon-6.png) left top no-repeat;
+}
+
+#main_footer .contact_icon7 ul li
+{
+    background: url(../images/contact-icon-7.png) left top no-repeat;
+}
+
+#main_footer .contact_icon8 ul li
+{
+    background: url(../images/contact-icon-8.png) left top no-repeat;
+}
+
+#main_footer .contact_icon9 ul li
+{
+    background: url(../images/contact-icon-9.png) left top no-repeat;
+}
+
+#main_footer .contact_icon10 ul li
+{
+    background: url(../images/contact-icon-10.png) left top no-repeat;
+}
+
+#main_footer .contact ul li.address
+{
+    background-position: 0px 7px;
+}
+
+#main_footer .contact ul li.mobile
+{
+    background-position: 0px -48px;
+    line-height: 25px;
+}
+
+#main_footer .contact ul li.email
+{
+    background-position: 0px -99px;
+    line-height: 28px;
+}
+
+#main_footer .contact ul li.fax
+{
+    background-position: 0px -153px;
+    line-height: 25px;
+}
+
+#main_footer .contact ul li a
+{
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+    #main_footer .contact ul li a:hover
+    {
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+div#f_pament {
+            font-size: 12px;
+            list-style-type: none;
+            padding: 0 0 0 36px;
+            min-height: 30px;
+            line-height: 18px;
+            margin-bottom: 7px;
+}
+#f_pament #paypal {
+    background: url(../images/payment_paypal.png) left top no-repeat;
+}
+

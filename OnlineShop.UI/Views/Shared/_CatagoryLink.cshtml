@@ -1,0 +1,6 @@
+﻿@model IEnumerable<OnlineShop.Domain.Category>
+   @foreach (var c in Model)
+   {
+ @Html.ActionLink(c.CategoryName,"../Product/ProductByCatagory",new {id=c.CategoryID})
+    
+   }

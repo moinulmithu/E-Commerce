@@ -1,0 +1,110 @@
+﻿@model OnlineShop.UI.ViewModel.CategiesAndProduct
+@{
+    ViewBag.Title = "MultiShopBD";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/slider.css" rel="stylesheet" />
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var carousel = $("#carousel").featureCarousel({
+            // include options like this:
+            // (use quotes only for string values, and no trailing comma after last option)
+            // option: value,
+            // option: value
+        });
+
+        $("#but_prev").click(function () {
+            carousel.prev();
+        });
+        $("#but_pause").click(function () {
+            carousel.pause();
+        });
+        $("#but_start").click(function () {
+            carousel.start();
+        });
+        $("#but_next").click(function () {
+            carousel.next();
+        });
+    });
+</script>
+
+<div>
+    <div class="carousel-container">
+
+        <div id="carousel">
+            <div class="carousel-feature">
+                <a href="#"><img class="carousel-image" alt="Image Caption" src="images/sample1.jpg"></a>
+                <div class="carousel-caption">
+                    <p>
+                        Samsung Digital Camera. 16.1 MP | 10x Optical Zoom | Auto focus lens
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-feature">
+                <a href="#">
+                <img class="carousel-image" alt="Image Caption" src="images/sample2.jpg">
+                </a>
+                <div class="carousel-caption">
+                    <p>
+                        Red | Green | Blue | White are available.
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-feature">
+                <a href="#">
+                <img class="carousel-image" alt="Image Caption" src="images/sample3.jpg">
+                </a>
+                <div class="carousel-caption">
+                    <p>
+                        Ray Ban Sunglasses from Italy.
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-feature">
+                <a href="#"><img class="carousel-image" alt="Image Caption" src="images/sample4.jpg"></a>
+                <div class="carousel-caption">
+                    <p>
+                        Sony XPeria Z1 with free Hedset.
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-feature">
+                <a href="#"><img class="carousel-image" alt="Image Caption" src="images/sample5.jpg"></a>
+                <div class="carousel-caption">
+                    <p>
+                        Turgus handbag famus in Europe
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        @*<div id="carousel-left"><img src="images/slider-arrow-left.png" /></div>
+        <div id="carousel-right"><img src="images/slider-arrow-right.png" /></div>*@
+    </div>
+    <div>
+        <section class="Left_add">
+            <div class="menu" id="NewsMenu">
+                <ul>
+                    <li>
+                        @foreach (var c in Model.Categories)
+                        {
+                            @Html.ActionLink(c.CategoryName, "ProductByCatagory", new { id = c.CategoryID })
+
+                        }
+                    </li>
+                </ul>
+            </div>
+            <script type="text/javascript">
+                new Sys.WebForms.Menu({ element: 'NewsMenu', disappearAfter: 500, orientation: 'vertical', tabIndex: 0, disabled: false });
+            </script>
+        </section>
+        <section class="NewProductSession">
+            <div class="row">
+                <ul>
+                    @Html.Partial("_NewProduct", Model.Products)
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>

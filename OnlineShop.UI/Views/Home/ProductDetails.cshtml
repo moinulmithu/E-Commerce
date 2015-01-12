@@ -1,0 +1,124 @@
+﻿@model OnlineShop.UI.ViewModel.ViewProductModel
+@{
+    ViewBag.Title = "ProductDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/joomerStyle.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="~/Scripts/tabs.js"></script>
+
+<div class="wrapper-box">
+    <div class="main-wrapper">
+        <div id="container">
+            <div id="column-left">
+                <div class="box">
+                    <div class="box-heading">Latest</div>
+                    <div class="box-content">
+                        <div class="box-product">
+                            <div class="flexslider">
+                                <ul class="slides">
+                                    @Html.Partial("_LatestProduct", Model.products)
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Latest Product End-->
+                <!--Banner Start-->
+                <div class="banner">
+                    <div><a href="#"><img src="../../images/product/small-banner1-220x350.jpg" alt="banner" title="banner" /></a></div>
+                    <div><a href="#"><img src="../../images/product/small-banner1-220x350.jpg" alt="banner" title="banner" /></a></div>
+                </div>
+                <!--Banner End-->
+            </div>
+            <!--Left End-->
+            <!--Middle Part Start-->
+            <div id="content">
+                <div class="breadcrumb"> <a href="/">Home</a> &raquo; <a href="@Url.Action("ProductDetails", new { id = Model.ID })">@Model.Name</a> </div>
+                <h1>@Model.Name</h1>
+                <div class="product-info">
+                    <div class="left">
+                        <div class="image">
+
+                            <img src="@Model.PhotoString" title="@Model.Name" alt="@Model.Name" id="image" />
+
+                        </div>
+
+                       
+                    </div>
+                    <div class="right">
+                        <div class="description">
+                            <span>Brand:</span> <a href="#">@Model.Category.CategoryName</a><br />
+                            <span>Product Code:</span> @Model.Name<br />
+                            <span>Reward Points:</span><strong>TK.</strong> @Model.Price<br />
+                            <span>Color:</span> @Model.PColor<br />
+                            <span>Warranty:</span> @Model.Warranty<br />
+                            <span>Discount:</span> @Model.Discount<br />
+                        </div>                        
+                       
+                    </div>
+                </div>
+
+                <div id="tabs" class="htabs"> <a href="#tab-description">Description</a> @*<a href="#tab-review">Reviews (0)</a>*@ </div>
+                <div id="tab-description" class="tab-content">
+                    <p>
+                        @Model.fDescription
+                        &nbsp;
+                    </p>
+                </div>
+              <div class="buttons">
+    <div class="right">@Html.ActionLink("Add To Cart", "../Cart/Add", new { id = Model.ID }, new { @class = "button" })
+</div>
+</div>
+                <div class="box">
+                    <div class="box-heading">Related Products</div>
+                    <div class="box-content">
+                        <div class="box-product">
+                            <div class="flexslider" id="related_pro">
+                                <ul class="slides">
+                                    @Html.Partial("_bottomProduct", Model.products)
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(document).ready(function () {
+                        $('#tabs a').tabs();
+                    });
+                </script>
+             </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!--Related Product Start-->
+    
+    <script type="text/javascript">
+        (function () {
+            // store the slider in a local variable
+            var $window = $(window),
+                flexslider;
+            // tiny helper function to add breakpoints
+            function getGridSize() {
+                return (window.innerWidth < 320) ? 1 :
+                       (window.innerWidth < 600) ? 2 :
+                       (window.innerWidth < 800) ? 3 :
+                       (window.innerWidth < 900) ? 3 : 4;
+            }
+            $window.load(function () {
+                $('#content #related_pro').flexslider({
+                    animation: "slide",
+                    animationLoop: false,
+                    slideshow: false,
+                    itemWidth: 210,
+                    minItems: getGridSize(), // use function to pull in initial value
+                    maxItems: getGridSize() // use function to pull in initial value
+                });
+            });
+        }());
+    </script>
+    <!--Related Product End-->
+    <!--=================================-->
+    
+</div>

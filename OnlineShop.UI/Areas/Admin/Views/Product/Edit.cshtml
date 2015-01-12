@@ -1,0 +1,120 @@
+﻿@model OnlineShop.Domain.Product
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <h2 style="color:red;">Warning!!! If you want to change The Image. Please Delete The Product And Insart Again.</h2>
+    <fieldset style="margin: 30px 150px 10px 150px; background-color: #525879">
+        <legend>Product</legend>
+
+        @Html.HiddenFor(model => model.ProductID)
+        <table class="FormTable">
+            <tr>
+                <td class="editor-label">
+                    Product Name :&nbsp;&nbsp;
+                </td>
+                <td class="editor-field">
+                    @Html.EditorFor(model => model.ProductName)
+                    @Html.ValidationMessageFor(model => model.ProductName)
+                </td>
+            </tr>
+            <tr>
+                <td class="editor-label">
+                    Short Description:
+                </td>
+                <td class="editor-field">
+                    @Html.EditorFor(model => model.ShortDescription)
+                    @Html.ValidationMessageFor(model => model.ShortDescription)
+                </td>
+            </tr>
+            <tr>
+                <td class="editor-label">
+                    Description :&nbsp;&nbsp;
+                </td>
+                <td class="editor-field">
+                    @Html.EditorFor(model => model.FullDescription)
+                    @Html.ValidationMessageFor(model => model.FullDescription)
+                </td>
+            </tr>
+            <tr>
+                <td class="editor-label">
+                    Product Image :&nbsp;&nbsp;
+                </td>
+                <td class="editor-field">
+                    <input type="file" name="images" />
+                </td>
+            </tr>
+            <tr>
+                <td class="editor-label">
+                    Color :&nbsp;&nbsp;
+                </td>
+                <td class="editor-field">
+                    @Html.EditorFor(model => model.ProductColor)
+                    @Html.ValidationMessageFor(model => model.ProductColor)
+                </td>
+            </tr>
+            <tr>
+                <td class="editor-label">
+                   Price:&nbsp;&nbsp;
+                </td>
+                <td class="editor-field">
+                    @Html.EditorFor(model => model.Price)
+                    @Html.ValidationMessageFor(model => model.Price)
+                </td>
+            </tr>
+            <tr>
+                <td class="editor-label">
+                    Warranty :&nbsp;&nbsp;
+                </td>
+                <td class="editor-field">
+                    @Html.EditorFor(model => model.Warranty)
+                    @Html.ValidationMessageFor(model => model.Warranty)
+                </td>
+            </tr>
+            <tr>
+                <td class="editor-label">
+                    Discount :&nbsp;&nbsp;
+                </td>
+                <td class="editor-field">
+                    @Html.EditorFor(model => model.Discount)
+                    @Html.ValidationMessageFor(model => model.Discount)
+                </td>
+            </tr>
+            <tr>
+                <td class="editor-label">
+                    Category:&nbsp;&nbsp;
+                </td>
+                <td class="editor-field">
+                    @Html.EditorFor(model => model.CategoryID)
+                    @Html.ValidationMessageFor(model => model.CategoryID)
+                </td>
+            </tr>
+            <tr>
+                <td class="editor-label">
+                    Add Date:&nbsp;&nbsp;
+                </td>
+                <td class="editor-field">
+                    @Html.EditorFor(model => model.ProductAddDate)
+                    @Html.ValidationMessageFor(model => model.ProductAddDate)
+                </td>
+            </tr>
+        </table>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+        <div class="CmonLink">
+    @Html.ActionLink("Back to List", "Index")
+</div>
+    </fieldset>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

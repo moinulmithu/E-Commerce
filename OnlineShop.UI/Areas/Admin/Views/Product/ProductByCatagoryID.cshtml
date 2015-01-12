@@ -1,0 +1,28 @@
+﻿@model IEnumerable<OnlineShop.Domain.Product>
+
+@{
+    ViewBag.Title = "ProductByCatagoryID";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="tableWepper">
+    <p class="CmonLink">
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="adminIndexListTable">
+        <tr>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Image</th>
+            <th>Color</th>
+            <th>Catagory name</th>
+            <th>Full Description</th>
+            <th>Warranty</th>
+            <th>Discount</th>
+            <th></th>
+        </tr>
+        @Html.Partial("_AdminProduct", Model)
+
+
+    </table>
+</div>

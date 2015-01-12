@@ -1,0 +1,12 @@
+﻿@using (Html.BeginForm())
+{
+    <div>
+        
+    <select name="status" id="status">
+        @Html.DropDownList("ALL", (string)ViewBag.Status)
+        @Html.DropDownList("Pending", (string)ViewBag.Status)
+        @Html.DropDownList("Shipped", (string)ViewBag.Status)
+    </select>
+    <input type="submit" value="Go" />
+    </div>
+}

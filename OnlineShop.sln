@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Domain", "OnlineShop.Domain\OnlineShop.Domain.csproj", "{D2F2FE0A-FB98-4DD3-BEA5-1901830F7019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.UI", "OnlineShop.UI\OnlineShop.UI.csproj", "{1BA539B1-D970-464E-B47F-62C6145EB100}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2F2FE0A-FB98-4DD3-BEA5-1901830F7019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2F2FE0A-FB98-4DD3-BEA5-1901830F7019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2F2FE0A-FB98-4DD3-BEA5-1901830F7019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2F2FE0A-FB98-4DD3-BEA5-1901830F7019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BA539B1-D970-464E-B47F-62C6145EB100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA539B1-D970-464E-B47F-62C6145EB100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA539B1-D970-464E-B47F-62C6145EB100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA539B1-D970-464E-B47F-62C6145EB100}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

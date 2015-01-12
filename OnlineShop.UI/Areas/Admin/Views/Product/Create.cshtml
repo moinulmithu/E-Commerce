@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@{
+    ViewBag.Title = "AddProduct";
+}
+
+@using (Html.BeginForm("CreateProduct", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    <fieldset style="margin: 30px 150px 10px 150px; background-color: #525879">
+        <legend>Product</legend>
+        <table class="FormTable">
+            <tr>
+                <td class="editor-label">
+                    Category :&nbsp;&nbsp;
+                </td>
+                <td class="editor-field">
+                    @Html.DropDownList("category", "Select Category")
+
+                </td>
+                <td >&nbsp;&nbsp;&nbsp;&nbsp;<span class="CmonLink">@Html.ActionLink("Create New", "../Category/Create")</span></td>
+            </tr>
+
+            <tr>
+                <td class="editor-label">
+                    Product Name :&nbsp;&nbsp;
+                </td>
+                <td class="editor-field">
+                    @Html.TextBox("ProductName")
+                </td>
+            </tr>
+            <tr>
+                <td class="editor-label">
+                    Product Price :&nbsp;&nbsp;
+                </td>
+                <td class="editor-field">
+                    @Html.TextBox("Price")
+                </td>
+            </tr>
+            <tr>
+                <td class="editor-label">Product Image :&nbsp;&nbsp;</td>
+                <td>
+                    <input type="file" name="images" />
+                </td>
+            </tr>
+            <tr>
+                <td class="editor-label">ShortDescription :&nbsp;&nbsp;</td>
+                <td>@Html.TextArea("ShortDescription")</td>
+            </tr>
+             <tr>
+                 <td class="editor-label">Full Description :&nbsp;&nbsp;</td>
+                <td>@Html.TextArea("FullDescription")</td>
+            </tr>
+            <tr>
+                <td class="editor-label">Color :&nbsp;&nbsp;</td>
+                <td>@Html.TextBox("ProductColor")</td>
+            </tr>
+            <tr>
+                <td class="editor-label">Warranty :&nbsp;&nbsp;</td>
+                <td>@Html.TextBox("Warranty")</td>
+            </tr>
+            <tr>
+                <td class="editor-label">Discount :&nbsp;&nbsp;</td>
+                <td>@Html.TextBox("Discount")</td>
+            </tr>
+        </table>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+        <div class="CmonLink">
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </fieldset>
+}
+
+

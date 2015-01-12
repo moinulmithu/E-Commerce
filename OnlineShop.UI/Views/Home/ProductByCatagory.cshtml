@@ -1,0 +1,38 @@
+﻿@model OnlineShop.UI.ViewModel.CategiesAndProduct
+@{
+    ViewBag.Title = "ProductByCatagory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<script id="CategoryMenu">
+    $(function (){
+        $("#CategoryMenu").accordion();
+    });
+</script>*@
+
+
+<div>
+    <section class="Left_add">
+        <div class="menu" id="NewsMenu">
+            <ul>
+                <li>
+                    @foreach (var c in Model.Categories)
+                    {
+                        @Html.ActionLink(c.CategoryName, "ProductByCatagory", new { id = c.CategoryID })
+
+                    }
+                </li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            new Sys.WebForms.Menu({ element: 'NewsMenu', disappearAfter: 500, orientation: 'vertical', tabIndex: 0, disabled: false });
+        </script>
+    </section>
+    <section class="NewProductSession">
+        <div class="row">
+            <ul>
+                @Html.Partial("_NewProduct", Model.Products)
+            </ul>
+        </div>
+    </section>
+</div>

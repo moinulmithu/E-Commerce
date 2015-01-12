@@ -1,0 +1,16 @@
+﻿@model OnlineShop.UI.ViewModel.ViewProductModel
+@{
+    ViewBag.Title = "ProductByID";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<ul>
+    <li>
+        <span>Name:</span> @Model.Name
+    </li>
+    <li>
+        <span>Price:</span> @Model.Price
+    </li>
+    <li>
+        <span>Photo:</span> <img src="@Model.PhotoString" border="0" width="100px" height="100px" />
+    </li>
+</ul>

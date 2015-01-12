@@ -1,0 +1,16 @@
+﻿@model IEnumerable<OnlineShop.Domain.Category>
+
+<div class="menu" id="NewsMenu">
+    <ul>
+        <li>
+           @foreach (var c in Model)
+{
+    @Html.ActionLink(c.CategoryName, "ProductByCatagory", new { id = c.CategoryID })
+
+}
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+    new Sys.WebForms.Menu({ element: 'NewsMenu', disappearAfter: 500, orientation: 'vertical', tabIndex: 0, disabled: false });
+</script>

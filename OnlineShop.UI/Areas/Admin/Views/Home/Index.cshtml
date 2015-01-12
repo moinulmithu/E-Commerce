@@ -1,0 +1,67 @@
+﻿@model OnlineShop.UI.ViewModel.CategiesAndProduct
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<section class="mainAdminView">
+
+@using (Ajax.BeginForm("ProductByCatagoryID", "Product", new AjaxOptions { UpdateTargetId = "divOrdetList" }))
+{
+    <div id="divOrdetList"></div>
+            <table class="adminIndexListTable" style="margin:50px 0px 10px 300px;">
+                <tr>
+                    <td>
+                        Catagory Name
+                    </td>
+                    <td>
+                        @Html.DropDownList("CategoryID", "Select Category")
+                    </td>
+                    <td>
+                        <input type="submit" value="GO" />
+                    </td>
+                </tr>
+
+            </table> 
+}
+    <div class="tableWepper">
+        <table class="adminIndexListTable">
+            <tr>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Image</th>
+                <th>Color</th>
+                <th>Catagory name</th>
+                
+                <th>Full Description</th>
+                <th>Warranty</th>
+                <th>Discount</th>
+                <th></th>
+            </tr>
+
+            @Html.Partial("_AdminProduct", Model.Products)
+
+        </table>
+    </div>
+    @{
+        OnlineShop.UI.Models.Pager pager = ViewBag.Pager;
+
+        if (pager.HasPreviousPage)
+        {
+            @Html.ActionLink("<<", "Index", new { page = pager.FirstPageIndex });
+        @Html.ActionLink("<", "Index", new { page = pager.PreviousPageIndex });
+        }
+
+        foreach (int page in ViewBag.Pager)
+        {
+            @Html.ActionLink(page.ToString(), "Index", new { page = page });
+        }
+
+        if (pager.HasNextPage)
+        {
+            @Html.ActionLink(">", "Index", new { page = pager.NextPageIndex });
+        @Html.ActionLink(">>", "Index", new { page = pager.LastPageIndex });
+        }
+    }
+</section>

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<OnlineShop.UI.ViewModel.OrderView>
+           
+<table class="adminIndexListTable" style="margin:30px 0px 10px 100px;">
+    <tr>
+        <th>
+            OrderID
+        </th>
+        <th>
+            Customer Name
+        </th>
+        <th>
+            Order Date
+        </th>
+        <th>
+            Status
+        </th>
+        <th>
+            Shipped Date
+        </th>
+        <th>
+            Order Value
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShippedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderValue)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditOrder", new { id = item.OrderID }) |                
+                @Html.ActionLink("Delete", "Delete", new { id = item.OrderID })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,190 @@
+/*
+    MD. ASHIQUZZAMAN(RAJIB)
+    ashiquzzaman@outlook.com
+    +880 1841 252600
+*/
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a, img, ol, ul, li,
+fieldset, form, label
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body
+{
+    line-height: 1;
+}
+
+ol, ul
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+html
+{
+    overflow: -moz-scrollbars-vertical;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background: #f8f8fa url(../image/patterns/27.png) left top repeat;
+    color: #222;
+    font-family: Droid Sans, Verdana, Geneva, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    line-height: 18px;
+}
+
+body, td, th, input, textarea, select, a
+{
+    font-size: 14px;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+h1
+{
+    color: #222;
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: normal;
+    text-align: center;
+    text-rendering: optimizelegibility;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h2
+{
+    color: #222;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    padding: 3px 0px 5px 0px;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+h4
+{
+    color: #222;
+    font-size: 13px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 3px 0px 5px 0px;
+    font-weight: bold;
+}
+
+p
+{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+
+a, a:visited, a b
+{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    a:hover
+    {
+        text-decoration: none;
+        color: #000;
+    }
+
+    a img
+    {
+        border: none;
+    }
+
+.clear
+{
+    clear: both;
+}
+
+form
+{
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
+input[type='text'], input[type='password'], textarea
+{
+    background: #fff;
+    border: 1px solid #dddddd;
+    padding: 7px 8px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom:10px;
+    font-size: 13px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 218px;
+}
+
+    input[type='text']:focus, input[type='password']:focus, textarea:focus
+    {
+        border: 1px solid #bbb;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+select
+{
+    background: #fff;
+    border: 1px solid #dddddd;
+    padding: 5px 2px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+label
+{
+    cursor: pointer;
+}
+  input[type="submit"],
+    input[type="button"],
+    button {
+        background-color: #d3dce0;
+        border: 1px solid #787878;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-weight: 600;
+        padding: 7px;
+        margin-right: 8px;
+        width: auto;
+        float:right;
+    }

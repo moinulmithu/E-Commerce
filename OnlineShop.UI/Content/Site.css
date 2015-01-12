@@ -1,0 +1,607 @@
+﻿
+
+
+body   
+{
+    background: rgb(255, 255, 255)  left top repeat;    /*url(../images/27.png)*/
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #EEEFF0;  /*rgba(255, 216, 0, 0.81)*/
+}
+
+a:link, a:visited
+{
+    /*color: #2aacc8;*/
+}
+
+a:hover
+{
+    color: #2aacc8;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #2aacc8;
+    
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #FFF;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width:960px;
+    background-color: #2DB3FF; /*rgba(202, 173, 173, 0.53)*/
+    margin: 10px auto 10px auto;
+    border: none;                               /*1px solid #496077*/
+    box-shadow: none;                              /*0px 10px 25px 8px #313E50*/
+}
+
+.main_header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #fff ;  /*rgba(97, 111, 139, 0.53)*/
+    width: 100%;
+    height:235px;
+    box-shadow:none;                /*0px 2px 5px 2px #313E50*/
+    border-radius:1px 1px 0px 0px;
+}
+
+.main_header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #fff; /*f9f9f9*/
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+#header_section
+{
+     margin: 0px;
+    padding: 0px;
+    background: #fff; /*5C676F*/
+    width: 100%;
+    height:200px;
+    border-bottom:1px solid #989B9E;
+}
+.main
+{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    min-height: 420px;
+
+}
+.left{
+    float: left;
+    /*width: 202px;*/
+    /*padding: 0px;
+    margin: 0px;
+    border-bottom:3px solid #7E7E7E;
+    border-left: 1px solid #7E7E7E;
+    border-right: 1px solid #7E7E7E;*/
+    
+    
+}
+.content{
+    float: left;
+    width: 746px;
+    padding: 0px;
+    margin: 0px;
+/*    border-bottom: 5px solid rgb(214, 207, 207);
+    border-left: 5px solid rgb(214, 207, 207);
+    border-right: 5px solid rgb(214, 207, 207);*/
+   
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+#bar{
+    padding: 0px;
+    margin: 0px;
+    /*border: solid 3px rgb(214, 207, 207);*/
+}
+#body 
+{
+    min-height:700px;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+nav.hideSkiplink
+{
+    background-color:#3a4f63;
+    width:100%;
+}
+
+div.menu
+{
+    padding: 0px 0px 0px 8px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    left: -8px;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #3a4f63;            /**/
+    border:none;                 /*1px #0F0A0A solid*/  /*eta hoche color code :4e667d*/
+    color:#EEEFF0;           /*#0F0A0A*/                /**/
+    display: block;
+    line-height: 1.35em;
+    padding: 8px 95px 8px 30px;
+    text-decoration: none;
+    white-space: nowrap;
+
+
+}
+li.static  a
+{
+    width: 70px;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+
+}
+
+/* SIDE MENU 
+----------------------------------------------------------*/
+
+#CategoryMenu ul li a{
+
+    width: 120px;
+    background-color: #4b6c9e;
+}
+#CategoryMenu ul li a:hover
+{
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+
+}
+
+#CategoryMenu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+
+}
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    font-family: serif;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.2em;
+    font-family: sans-serif;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+
+}
+.CmonLink{
+border:1px solid #465c71;
+padding:5px;
+background-color:#97A1AA;
+width:100px;
+text-align:center;
+font-size:1.2em;
+font-weight:600;
+}
+.loginDisplay ul li{
+    display:inline-block;
+    padding:5px;
+}
+.loginDisplay ul li:first-child{
+    background-color:#fff;  /*97A1AA*/
+    
+}
+.loginDisplay ul li:last-child{
+    background-color:rgba(172, 165, 165, 1);
+}
+.loginDisplay a:link
+{
+    /*color: white;*/
+    text-decoration: none;
+    font-weight:500;
+}
+
+.loginDisplay a:visited
+{
+    /*color: white;*/
+}
+
+.loginDisplay a:hover
+{
+    color: blueviolet;   /*white*/
+}
+  #loginForm {
+        border-right: none;
+        float: none;
+        width: auto;
+    }
+
+        #loginForm .validation-error {
+            display: block;
+            margin-left: 15px;
+        }
+
+    #socialLoginForm {
+        margin-left: 0;
+        float: none;
+        width: auto;
+    }
+.LoginField{
+    margin: 20px 250px 10px 250px; 
+    background-color:rgba(172, 165, 165, 1) /*rgba(75, 108, 121, 0.83);*/
+}
+.LoginField ol li {
+    padding-left:40px;
+}
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+.FormLoginRig {
+
+}
+.txtLogin{
+
+
+}
+p#Col a{color: #05108B;}
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+    
+/* ============  Main Navigation Styling =============== */
+
+#main_menu {
+    float: right;
+    margin-top: 10px;
+        /*background: #222;*/
+}
+
+.first_list {
+    float: left;
+    margin: 0 14px;
+}
+
+.main_menu_first {
+    color: #000;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px 8px;
+    text-transform: uppercase;
+}
+
+.main_menu_first:hover {
+    border-top: 5px solid #2aacc8;
+    background-color:#ffffff;
+}
+
+.with_dropdown {
+    position: relative;
+    z-index: 1008;
+}
+
+.with_dropdown li a {
+    display: block;
+}
+
+.with_dropdown ul {
+    background: #fff;
+    border-bottom: 5px solid #2aacc8;
+    padding: 12px 0;
+    position: absolute;
+    top: 24px;
+    visibility: hidden;
+    width: 197px;
+}
+
+.first_list:hover.first_list ul {
+    visibility: visible;
+}
+
+.with_dropdown .main_menu_first {
+    background: url(../images/arrow_down.png) no-repeat 92%;
+    padding-right: 23px;
+}
+
+.with_dropdown:hover .main_menu_first {
+    background: #fff url(../images/arrow_down.png) no-repeat 92%;
+    border-top: 5px solid #2aacc8;
+    color: #2aacc8;
+}
+
+.second_list {
+    margin: 0 5px;
+    padding: 10px;
+}
+
+.second_list_border {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.main_menu_second {
+    color: #000;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+.main_menu_second:hover {
+    color: #2aacc8;
+}
+
+.main_current {
+    border-top: 5px solid #2aacc8;
+}
+  .categories_hor {
+    /*background: url(../images/arrow_down.png) no-repeat 92%;*/
+    padding-right: 23px;
+}
+/*
+.categories_hor:hover {
+    background: #fff url(../image/arrow_down.png) no-repeat 92%;
+    border-top: 5px solid #2aacc8;
+    color: #2aacc8;
+}*/
+        
+        #main_menu > ul > li.categories_hor > div
+        {
+            display: none;
+            background: #fff;
+            min-width: 800px;
+            max-width:950px;
+            position: absolute;
+            z-index: 1008;
+            padding: 10px 0px 0px 10px;
+            border-top: 2px solid #2aacc8;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            right:0px;
+            margin-top:6px;
+        }
+
+         #main_menu > ul > li.categories_hor > div > .column
+        {
+            position: relative;
+            display: inline-block;
+            width: 160px;
+            margin: 0 15px 15px 0px;
+        }
+
+        #main_menu > ul > li.categories_hor > div > .column > a
+        {
+            font-weight: bold;
+            font-size: 13px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 5px;
+        }
+
+        #main_menu > ul > li.categories_hor > div > .column a
+        {
+            padding: 4px 0;
+            display: block;
+        }
+
+
+        #main_menu > ul > li.categories_hor > div > .column:hover > a
+        {
+            color: #2aacc8;
+        }
+
+        #main_menu > ul > li.categories_hor > div > .column > div
+        {
+            display: block;
+        }
+
+        #main_menu > ul > li.categories_hor > div > .column:hover div
+        {
+            display: table;
+        }
+
+        #main_menu > ul > li.categories_hor > div > .column > div ul
+        {
+            display: table;
+            padding: 0;
+        }
+
+      
+            #main_menu > ul > li div > ul > li > a:hover
+            {
+                background: url(../image/bullet-1.png) right center no-repeat;
+                color: #2aacc8;
+            }
+
+        
+
+        #main_menu > ul > li:hover > div
+        {
+            display: block;
+        }
+          
+.txtLike{
+ background: #fff;
+border: 1px solid #dddddd;
+padding: 7px 8px;
+margin-left: 5px;
+margin-right: 0px;
+margin-bottom: 10px;
+margin-top:10px;
+font-size: 13px;
+font-family: Georgia, "Times New Roman", Times, serif;
+-webkit-transition: all 0.3s ease-in-out;
+-moz-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;
+-ms-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+width: 218px;
+}
+
+.back-to-top a{ position:fixed; bottom:20px; right:20px; background:rgba(250, 250, 250, 0.5)url(image/back-to-top.png) left top no-repeat; width:35px; height:35px;text-indent:-9999px; display:block;}
+.back-to-top a:hover { background:#D45C93 url(image/back-to-top.png) left -35px no-repeat; }
+
+#bacCol{
+    background-color:#FFF;
+    border-radius:10px;
+    
+}

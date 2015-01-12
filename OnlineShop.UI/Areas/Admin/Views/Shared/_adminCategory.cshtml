@@ -1,0 +1,16 @@
+﻿@model IEnumerable<OnlineShop.Domain.Category>
+
+   @foreach (var c in Model)
+   {
+   <tr> 
+       <td>
+       @Html.DisplayFor(modelItem => c.CategoryID)
+       </td>
+ <td>@Html.ActionLink(c.CategoryName,"../Product/ProductByCatagory",new {id=c.CategoryID})</td>
+            <td>
+            @Html.ActionLink("Edit", "../Category/index", new { id=c.CategoryID}) |
+            @Html.ActionLink("Details", "../Product/ProductByCatagory", new { id=c.CategoryID}) |
+           @Html.ActionLink("Delete", "../Category/index", new { id=c.CategoryID})
+        </td>
+       </tr>
+   }

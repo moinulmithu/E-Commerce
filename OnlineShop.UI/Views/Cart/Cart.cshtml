@@ -1,0 +1,50 @@
+﻿@model OnlineShop.UI.ViewModel.CartView
+@{
+    ViewBag.Title = "Cart";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="margin: 100px 200px">
+    <table class="adminIndexListTable">
+        <tr>
+            <th>
+                Product
+            </th>
+            <th>
+                Price/Item
+            </th>
+            <th>
+                Quantity
+            </th>
+
+            <th>
+                ...
+            </th>
+        </tr>
+        @foreach (var item in Model.CartItems)
+        {
+            <tr>
+                @Html.Partial("EditCart", item)
+
+            </tr>
+        }
+        <tr>
+            <td>
+                TOTAL:
+            </td>
+            <td colspan="5" align="right">
+                @Html.DisplayFor(modelItem => Model.Total)
+            </td>
+        </tr>
+        <tr>
+            <td class="CmonLink" colspan="2">
+                @Html.ActionLink("Continue shopping", "Index", "Home")
+            </td>
+            <td class="CmonLink" colspan="2">
+                @Html.ActionLink("Check out", "Checkout", "Order")
+            </td>
+        </tr>
+    </table>
+</div> 
+
+

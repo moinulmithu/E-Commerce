@@ -1,0 +1,38 @@
+﻿@model OnlineShop.Domain.Category
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset style="margin: 30px 150px 10px 150px; background-color: #525879">
+        <legend>Category</legend>
+
+        @Html.HiddenFor(model => model.CategoryID)
+        <div>
+            <span class="editor-label">
+                @Html.Label("Category Name: ")
+            </span>
+            <span class="editor-field">
+                @Html.EditorFor(model => model.CategoryName)
+                @Html.ValidationMessageFor(model => model.CategoryName)
+            </span>
+        </div>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+        <div class="CmonLink">
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+
+    </fieldset>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

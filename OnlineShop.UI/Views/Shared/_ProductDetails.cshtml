@@ -1,0 +1,5 @@
+﻿@model OnlineShop.Domain.Product
+
+<span>@Model.ProductName</span>
+<div>@Model.Price</div>
+<div>@Html.ActionLink("Add To Cart", "Add", "Cart",new { id=@Model.ProductID}, null);</div>

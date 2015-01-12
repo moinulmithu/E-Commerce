@@ -1,0 +1,5 @@
+﻿@model OnlineShop.Domain.Product
+
+<span>@Model.ProductName</span>
+<div>@Model.Price</div>
+<div>"data:image/png;base64," + Convert.ToBase64String(@Model.ProductImage)</div>

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<OnlineShop.Domain.Product>
+
+
+        @foreach (var P in Model)
+        {
+
+        <tr>
+            <td>@P.ProductName</td>
+            <td>@P.Price</td>
+            @{ byte[] photo = P.ProductImage;
+             string imageSrc = null;
+             if (photo != null)
+             {
+                 imageSrc = "data:image/png;base64," + Convert.ToBase64String(photo);
+
+             }
+            }
+            <td><img src="@imageSrc" alt="Employee Photo" border="0" width="100px" height="100px" /></td>
+            <td>@P.ProductColor</td>
+            <td>@P.Category.CategoryName</td>
+            <td class="Discription">@P.FullDescription</td>
+            <th>@P.Warranty</th>
+            <th>@P.Discount</th>
+            <td>
+                @Html.ActionLink("Edit", "../Product/Edit", new { id = P.ProductID }) |
+                @*@Html.ActionLink("Details", "../Product/ProductByID", new { id = P.ProductID }) |*@
+                @Html.ActionLink("Delete", "../Product/Delete", new { id = P.ProductID })
+            </td>
+
+ </tr> 
+   }
+
